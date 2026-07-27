@@ -2,7 +2,7 @@
 
 A product listing, product detail, and cart flow built with Next.js (App Router), TypeScript, and Tailwind CSS.
 
-**Live demo:** _add your Vercel deployment URL here_
+**Live demo:** [whatbytes-sandy-mu.vercel.app](https://whatbytes-sandy-mu.vercel.app/)
 
 ## Features
 
