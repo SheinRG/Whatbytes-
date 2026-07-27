@@ -39,6 +39,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
+      // One-time hydration from localStorage on mount; localStorage isn't
+      // available during SSR so this can't be a lazy useState initializer.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (stored) setItems(JSON.parse(stored));
     } catch {
       // ignore malformed storage
