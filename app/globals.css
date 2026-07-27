@@ -29,3 +29,11 @@ body {
 input[type="range"] {
   accent-color: var(--color-accent);
 }
+
+.bg-navy-panel {
+  background: linear-gradient(160deg, var(--color-navy-light) 0%, var(--color-navy) 65%);
+}
+
+.bg-accent-panel {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+}

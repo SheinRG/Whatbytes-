@@ -16,7 +16,7 @@ export default function CartPage() {
         <p className="mt-2 text-gray-500">Add some products to see them here.</p>
         <Link
           href="/"
-          className="mt-6 rounded-md bg-accent px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-dark"
+          className="bg-accent-panel mt-6 rounded-md px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-150 hover:brightness-110 hover:shadow active:scale-[0.98]"
         >
           Continue Shopping
         </Link>
@@ -34,7 +34,7 @@ export default function CartPage() {
           {items.map((item) => (
             <div
               key={item.id}
-              className="flex items-center gap-4 rounded-lg border border-black/5 bg-white p-4"
+              className="flex items-center gap-4 rounded-lg border border-black/5 bg-white p-4 shadow-sm transition-shadow duration-150 hover:shadow-md"
             >
               <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-md">
                 <Image src={item.image} alt={item.title} fill className="object-cover" />
@@ -55,7 +55,7 @@ export default function CartPage() {
               <button
                 onClick={() => removeFromCart(item.id)}
                 aria-label={`Remove ${item.title}`}
-                className="text-gray-400 hover:text-red-500"
+                className="text-gray-400 transition-colors duration-150 hover:text-red-500"
               >
                 <Trash2 className="h-5 w-5" />
               </button>
@@ -63,7 +63,7 @@ export default function CartPage() {
           ))}
         </div>
 
-        <div className="h-fit rounded-lg border border-black/5 bg-white p-6">
+        <div className="h-fit rounded-lg border border-black/5 bg-white p-6 shadow-sm">
           <h2 className="text-lg font-semibold text-gray-900">Order Summary</h2>
           <div className="mt-4 space-y-2 text-sm text-gray-600">
             <div className="flex justify-between">
@@ -79,7 +79,7 @@ export default function CartPage() {
             <span>Total</span>
             <span>${(totalPrice + shipping).toFixed(2)}</span>
           </div>
-          <button className="mt-6 w-full rounded-md bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-dark">
+          <button className="bg-accent-panel mt-6 w-full rounded-md px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-150 hover:brightness-110 hover:shadow active:scale-[0.98]">
             Checkout
           </button>
         </div>

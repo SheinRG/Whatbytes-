@@ -26,7 +26,7 @@ export default function ProductDetail({ product }: { product: Product }) {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
-        <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-white">
+        <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-white shadow-sm">
           <Image
             src={product.image}
             alt={product.title}
@@ -61,7 +61,7 @@ export default function ProductDetail({ product }: { product: Product }) {
 
           <button
             onClick={handleAddToCart}
-            className="mt-6 w-full rounded-md bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-dark sm:w-auto sm:px-10"
+            className="bg-accent-panel mt-6 w-full rounded-md px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-150 hover:brightness-110 hover:shadow active:scale-[0.98] sm:w-auto sm:px-10"
           >
             {added ? "Added!" : "Add to Cart"}
           </button>
@@ -70,7 +70,10 @@ export default function ProductDetail({ product }: { product: Product }) {
             <h2 className="text-lg font-semibold text-gray-900">Reviews</h2>
             <div className="mt-4 space-y-4">
               {sampleReviews.map((review) => (
-                <div key={review.name} className="rounded-md border border-gray-200 p-4">
+                <div
+                  key={review.name}
+                  className="rounded-md border border-gray-200 p-4 transition-shadow duration-150 hover:shadow-sm"
+                >
                   <div className="flex items-center justify-between">
                     <p className="text-sm font-medium text-gray-900">{review.name}</p>
                     <StarRating rating={review.rating} />

@@ -24,7 +24,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-20 bg-navy text-white">
+    <header className="bg-navy-panel sticky top-0 z-20 text-white shadow-md">
       <div className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-4 sm:px-6">
         <Link href="/" className="shrink-0 text-xl font-bold tracking-tight">
           Logo
@@ -32,7 +32,7 @@ export default function Header() {
 
         <form
           onSubmit={handleSearch}
-          className="mx-auto flex w-full max-w-md flex-1 items-center gap-2 rounded-md bg-white/10 px-3 py-2 text-sm"
+          className="mx-auto flex w-full max-w-md flex-1 items-center gap-2 rounded-md bg-white/10 px-3 py-2 text-sm ring-1 ring-white/10 transition focus-within:bg-white/15 focus-within:ring-white/25"
         >
           <Search className="h-4 w-4 shrink-0 text-white/70" />
           <input
@@ -47,19 +47,19 @@ export default function Header() {
         <div className="flex shrink-0 items-center gap-3">
           <Link
             href="/cart"
-            className="flex items-center gap-2 rounded-md bg-[#0a1f42] px-4 py-2 text-sm font-medium transition hover:bg-[#0a1a38]"
+            className="flex items-center gap-2 rounded-md bg-[#0a1f42] px-4 py-2 text-sm font-medium transition-colors duration-150 hover:bg-[#0a1a38]"
           >
             <span className="relative">
               <ShoppingCart className="h-4 w-4" />
               {totalItems > 0 && (
-                <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-bold text-white">
+                <span className="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-bold text-white shadow-sm">
                   {totalItems}
                 </span>
               )}
             </span>
             Cart
           </Link>
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 transition-colors duration-150 hover:bg-white/20">
             <User className="h-4 w-4" />
           </div>
         </div>

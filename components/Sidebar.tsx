@@ -21,16 +21,16 @@ export default function Sidebar({
 }: Props) {
   return (
     <aside className="w-full shrink-0 space-y-4 lg:w-64">
-      <div className="rounded-lg bg-navy p-5 text-white">
+      <div className="bg-navy-panel rounded-lg p-5 text-white shadow-md">
         <h2 className="text-lg font-bold">Filters</h2>
 
         <div className="mt-4">
           <h3 className="text-sm font-semibold text-white/90">Category</h3>
-          <div className="mt-2 space-y-2">
+          <div className="mt-2 space-y-1">
             {categories.map((c) => (
               <label
                 key={c.value}
-                className="flex cursor-pointer items-center gap-2 text-sm text-white/80"
+                className="flex cursor-pointer items-center gap-2 rounded-md px-1.5 py-1 text-sm text-white/80 transition-colors duration-150 hover:bg-white/10"
               >
                 <input
                   type="radio"
@@ -63,10 +63,10 @@ export default function Sidebar({
         </div>
       </div>
 
-      <div className="rounded-lg border border-black/5 bg-white p-5">
+      <div className="rounded-lg border border-black/5 bg-white p-5 shadow-sm transition-shadow duration-200 hover:shadow-md">
         <h3 className="text-sm font-semibold text-gray-900">Brand</h3>
-        <div className="mt-2 space-y-2">
-          <label className="flex cursor-pointer items-center gap-2 text-sm text-gray-600">
+        <div className="mt-2 space-y-1">
+          <label className="flex cursor-pointer items-center gap-2 rounded-md px-1.5 py-1 text-sm text-gray-600 transition-colors duration-150 hover:bg-gray-50">
             <input
               type="radio"
               name="brand"
@@ -79,7 +79,7 @@ export default function Sidebar({
           {brands.map((b) => (
             <label
               key={b}
-              className="flex cursor-pointer items-center gap-2 text-sm text-gray-600"
+              className="flex cursor-pointer items-center gap-2 rounded-md px-1.5 py-1 text-sm text-gray-600 transition-colors duration-150 hover:bg-gray-50"
             >
               <input
                 type="radio"

@@ -26,18 +26,18 @@ function InstagramIcon() {
 
 export default function Footer() {
   return (
-    <footer className="mt-auto bg-navy text-white">
+    <footer className="bg-navy-panel mt-auto text-white">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-10 sm:grid-cols-3 sm:px-6">
         <div>
           <h3 className="mb-3 text-sm font-semibold">Quick Links</h3>
           <ul className="space-y-2 text-sm text-white/70">
             <li>
-              <Link href="/" className="hover:text-white">
+              <Link href="/" className="transition-colors duration-150 hover:text-white">
                 All Products
               </Link>
             </li>
             <li>
-              <Link href="/cart" className="hover:text-white">
+              <Link href="/cart" className="transition-colors duration-150 hover:text-white">
                 Cart
               </Link>
             </li>
@@ -47,12 +47,12 @@ export default function Footer() {
           <h3 className="mb-3 text-sm font-semibold">About Us</h3>
           <ul className="space-y-2 text-sm text-white/70">
             <li>
-              <Link href="/" className="hover:text-white">
+              <Link href="/" className="transition-colors duration-150 hover:text-white">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-white">
+              <Link href="/" className="transition-colors duration-150 hover:text-white">
                 Contact
               </Link>
             </li>
@@ -64,21 +64,21 @@ export default function Footer() {
             <a
               href="#"
               aria-label="Facebook"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 transition-colors duration-150 hover:bg-white/20"
             >
               <FacebookIcon />
             </a>
             <a
               href="#"
               aria-label="Twitter"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 transition-colors duration-150 hover:bg-white/20"
             >
               <TwitterIcon />
             </a>
             <a
               href="#"
               aria-label="Instagram"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 hover:bg-white/20"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 transition-colors duration-150 hover:bg-white/20"
             >
               <InstagramIcon />
             </a>

@@ -40,7 +40,9 @@ export default function ShopContent() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6">
-      <h1 className="mb-5 text-2xl font-bold text-gray-900">Product Listing</h1>
+      <h1 className="mb-5 text-2xl font-bold tracking-tight text-gray-900">
+        Product Listing
+      </h1>
       <div className="flex flex-col gap-6 lg:flex-row">
         <Sidebar
           category={category}

@@ -11,17 +11,17 @@ export default function ProductCard({ product }: { product: Product }) {
 
   if (product.featured) {
     return (
-      <div className="col-span-1 flex flex-col overflow-hidden rounded-lg border border-black/5 bg-white shadow-sm sm:col-span-2 sm:flex-row">
+      <div className="group col-span-1 flex flex-col overflow-hidden rounded-lg border border-black/5 bg-white shadow-sm transition-shadow duration-200 hover:shadow-lg sm:col-span-2 sm:flex-row">
         <Link
           href={`/product/${product.id}`}
-          className="relative h-56 w-full shrink-0 sm:h-auto sm:w-64"
+          className="relative h-56 w-full shrink-0 overflow-hidden sm:h-auto sm:w-64"
         >
           <Image
             src={product.image}
             alt={product.title}
             fill
             sizes="(min-width: 640px) 256px, 100vw"
-            className="object-cover"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
         <div className="flex flex-1 flex-col p-5">
@@ -42,7 +42,7 @@ export default function ProductCard({ product }: { product: Product }) {
           </p>
           <button
             onClick={() => addToCart(product)}
-            className="mt-4 w-full max-w-xs rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-dark sm:w-auto"
+            className="bg-accent-panel mt-4 w-full max-w-xs rounded-md px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-150 hover:brightness-110 hover:shadow active:scale-[0.98] sm:w-auto"
           >
             Add to Cart
           </button>
@@ -52,14 +52,17 @@ export default function ProductCard({ product }: { product: Product }) {
   }
 
   return (
-    <div className="flex flex-col overflow-hidden rounded-lg border border-black/5 bg-white shadow-sm">
-      <Link href={`/product/${product.id}`} className="relative block aspect-square w-full">
+    <div className="group flex flex-col overflow-hidden rounded-lg border border-black/5 bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
+      <Link
+        href={`/product/${product.id}`}
+        className="relative block aspect-square w-full overflow-hidden"
+      >
         <Image
           src={product.image}
           alt={product.title}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </Link>
       <div className="flex flex-1 flex-col p-4">
@@ -74,7 +77,7 @@ export default function ProductCard({ product }: { product: Product }) {
         )}
         <button
           onClick={() => addToCart(product)}
-          className="mt-3 w-full rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent-dark"
+          className="bg-accent-panel mt-3 w-full rounded-md px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-150 hover:brightness-110 hover:shadow active:scale-[0.98]"
         >
           Add to Cart
         </button>
